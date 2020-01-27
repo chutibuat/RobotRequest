@@ -16,7 +16,7 @@ Get Requests status 200 and success
     &{result}=    Convert To Dictionary    ${resultJson[0]}
     Should Be Equal As Strings    ${result.name}    id labore ex et quam laborum
 
-Get Requests length 
+Get Requests status 404 and not found	
     Create Session    ApiJsonplaceholder    ${URL}
     ${resp}=    Get Request    ApiJsonplaceholder    /comment?postId=1
     Should Be Equal As Strings    ${resp.status_code}    404
